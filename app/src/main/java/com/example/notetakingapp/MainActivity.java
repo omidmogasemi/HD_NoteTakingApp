@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // create our service to connect to the internet 
+        // create our service to connect to the internet
         GetNotes service = RetrofitClient.getRetrofitInstance().create(GetNotes.class);
         // send the GET request
         Call<List<Note>> call = service.getNotes();
